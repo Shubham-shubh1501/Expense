@@ -20,9 +20,6 @@
     .navbar-inverse .navbar-nav>.active>a{
         background-color: sandybrown;
     }
-    body {
-        background-color: #269abc;
-    }
     </style>
 </head>
 
@@ -43,17 +40,17 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <g:if test="${expense.RegisterController || expense.LoginController}">
+
+        <g:if test="${!session.loggedInUserID}">
             <ul class="nav navbar-nav navbar-right">
                 <li class="${controllerName.equals("Register")?'active':''}"><a href="/Register/index/">Register</a></li>
                 <li class="${controllerName.equals("Login")?'active':''}"><a href="/Login/index/">Login</a></li>
             </ul>
         </g:if>
 
-        <g:if test="${expense.ProfileController || expense.LogoutController}">
+        <g:if test="${session.loggedInUserID}">
             <ul class="nav navbar-nav navbar-right">
                 <li class="${controllerName.equals("Profile")?'active':''}"><a href="/Profile/index/">Profile</a></li>
-
                 <li class="${controllerName.equals("Logout")?'active':''}"><a href="/Logout/index/">Logout</a></li>
             </ul>
         </g:if>
