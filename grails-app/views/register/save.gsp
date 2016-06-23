@@ -17,7 +17,10 @@
     <h1>Show Status</h1>
 </content>
 <content tag="body">
-    You Are Registered...
+    You Are Registered...<br>
+    First Name:${registeredUser.firstName}<br>
+    Last Name:${registeredUser.lastName}<br>
+    Email:${registeredUser.email}
 </content>
 </body>
 </html>
