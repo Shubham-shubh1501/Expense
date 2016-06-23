@@ -18,7 +18,7 @@
 </content>
 <content tag="body">
     <div>
-        <g:form controller="Login" action="save" class="table-bordered">
+        <g:form  method="Post" controller="Login" action="save" class="table-bordered">
             <div class="form-group ${hasErrors(bean: myUser,field:'email','has-error')}">
 
                 <label for="Email"> Email:</label>
