@@ -17,25 +17,12 @@
     <h1>Profile</h1>
 </content>
 <content tag="body">
-    <div>
-        <g:form controller="Profile" action="edit" class="table-bordered">
-            <div class="form-group">
-
-                <label for="firstName"> Email:</label>
-                <g:textField  name="firstName"  class="form-control"
-                              /><br>
-
-            </div>
-            <div class="form-group ">
-                <label for="lastName">Last Name:</label>
-                <g:textField  name="lastName"  class="form-control"
-                              /><br>
-            </div>
-            <div>
-                <g:submitButton name="Submit" class="btn btn-inverse btn-block"/>
-            </div>
-        </g:form>
-    </div>
+    <dl>
+        <dt>First Name: <dd>${sendDetails.firstName}</dd></dt>
+        <dt>Last Name: <dd>${sendDetails.lastName}</dd></dt>
+        <dt>Email: <dd>${sendDetails.email}</dd></dt>
+    </dl>
+    <a href="/profile/edit" class="btn btn-primary">Edit</a>
 </content>
 </body>
 </html>
