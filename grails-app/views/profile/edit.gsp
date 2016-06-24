@@ -23,24 +23,24 @@
             <input type="hidden" name="password" value="${sendDetails.password}">
 
 
-            <div class="form-group ${hasErrors(bean: myUser1,field:'firstName','has-error')}">
+            <div class="form-group ${hasErrors(bean: myUser,field:'firstName','has-error')}">
                 <label for="firstName"> First Name:</label>
                 <g:textField name="firstName" placeholder="Enter FirstName" class="form-control"
                              value="${sendDetails.firstName}"/><br>
-                <g:renderErrors bean="${myUser1}" field="firstName"/>
+                <g:renderErrors bean="${myUser}" field="firstName"/>
             </div>
-            <div class="form-group ${hasErrors(bean: myUser1,field:'lastName','has-error')}">
+            <div class="form-group ${hasErrors(bean: myUser,field:'lastName','has-error')}">
                 <label for="lastName"> Last Name:</label>
                 <g:textField  name="lastName" placeholder="Enter LastName" class="form-control"
                               value="${sendDetails.lastName}"/><br>
-                <g:renderErrors bean="${myUser1}" field="lastName"/>
+                <g:renderErrors bean="${myUser}" field="lastName"/>
             </div>
-            <div class="form-group ${hasErrors(bean: myUser1,field:'email','has-error')}">
+            <div class="form-group ${hasErrors(bean: myUser,field:'email','has-error')}">
 
                 <label for="Email"> Email:</label>
                 <g:textField  name="Email" placeholder="Enter Email-id" class="form-control"
                               value="${sendDetails.email}"/><br>
-                <g:renderErrors bean="${myUser1}" field="email"/>
+                <g:renderErrors bean="${myUser}" field="email"/>
             </div>
             <div >
                 <g:submitButton name="Edit" class="btn btn-primary"/>
